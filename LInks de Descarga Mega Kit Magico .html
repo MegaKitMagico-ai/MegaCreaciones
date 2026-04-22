@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎨 MEGA KIT MÁGICO - Links de Descarga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #8e44ad;
+      --secondary: #9b59b6;
+      --accent: #e91e8d;
+      --light: #f9f4ff;
+      --dark: #2c1a3a;
+      --shadow: 0 10px 30px rgba(142, 68, 173, 0.25);
+      --transition: all 0.3s ease;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e9d5ff 100%);
+      color: var(--dark);
+      line-height: 1.6;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 20px;
+      color: white;
+      margin-bottom: 30px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: "✨";
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.15;
+      top: -20px;
+      right: -20px;
+      transform: rotate(15deg);
+    }
+    
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    
+    .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.95;
+      margin-bottom: 20px;
+    }
+    
+    .instructions {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: var(--shadow);
+      border-left: 5px solid var(--accent);
+    }
+    
+    .instructions h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .instructions ol {
+      padding-left: 20px;
+      margin: 10px 0;
+    }
+    
+    .instructions li {
+      margin: 8px 0;
+    }
+    
+    .section {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(142, 68, 173, 0.35);
+    }
+    
+    .section-title {
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px dashed #e0d0f0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+    }
+    
+    .link-card {
+      background: var(--light);
+      border-radius: 12px;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: var(--transition);
+      border: 1px solid #eee;
+    }
+    
+    .link-card:hover {
+      background: linear-gradient(135deg, #f0e6ff, #fff);
+      border-color: var(--secondary);
+      transform: translateX(5px);
+    }
+    
+    .link-card i {
+      font-size: 1.3rem;
+      color: var(--accent);
+      min-width: 24px;
+    }
+    
+    .link-card a {
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 500;
+      flex: 1;
+      word-break: break-all;
+      transition: var(--transition);
+    }
+    
+    .link-card a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    
+    .badge {
+      background: var(--accent);
+      color: white;
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+    
+    .note {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 10px;
+      padding: 12px 18px;
+      margin: 15px 0;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .note i {
+      color: #856404;
+      margin-top: 3px;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--dark);
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+    
+    .footer i {
+      color: var(--accent);
+      margin: 0 3px;
+    }
+    
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      .section { padding: 20px; }
+      .links-grid { grid-template-columns: 1fr; }
+    }
+    
+    /* Animación de entrada */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .section {
+      animation: fadeInUp 0.5s ease forwards;
+      animation-delay: calc(var(--i, 0) * 0.1s);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Header -->
+    <header>
+      <h1>🎨 MEGA KIT MÁGICO</h1>
+      <p class="subtitle">Links de Descarga Organizados - Documento Editable</p>
+    </header>
+
+    <!-- Instrucciones -->
+    <div class="instructions">
+      <h3><i class="fas fa-magic"></i> Instrucciones Generales para Canva</h3>
+      <p><strong>Al abrir cualquier invitación o plantilla:</strong></p>
+      <ol>
+        <li>Ve a <strong>"Crear diseño nuevo"</strong></li>
+        <li>Guárdalo en tu cuenta de <strong>Canva</strong> con un nombre personalizado</li>
+        <li>¡Listo para editar! ✏️</li>
+      </ol>
+      <div class="note">
+        <i class="fas fa-info-circle"></i>
+        <strong>Para archivos PowerPoint:</strong> Descarga el archivo → Abre Canva → Clic en "SUBIR" → Selecciona el archivo PPT → Edita.
+      </div>
+    </div>
+
+    <!-- Invitaciones -->
+    <div class="section" style="--i:1">
+      <h2 class="section-title"><i class="fas fa-envelope-open-text"></i> 🎉 INVITACIONES EDITABLES EN CANVA</h2>
+      <div class="links-grid">
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/tcxire" target="_blank">Invitación 1</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/nvhafb" target="_blank">Invitación 2</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/xyanej" target="_blank">Invitación 3</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/cnpfym" target="_blank">Invitación 4</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/pdfker" target="_blank">Invitación 5</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/kejqoj" target="_blank">Invitación Interactiva ✨</a><span class="badge">Premium</span></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/zfblrn" target="_blank">Invitación Video/Animada 🎬</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/qsgyvl" target="_blank">Bono Invitación 🎁</a></div>
+      </div>
+      <div class="note">
+        <i class="fas fa-exclamation-triangle"></i>
+        La invitación #8 está en Google Drive: descárgala a tu computadora para editar.
+      </div>
+    </div>
+
+    <!-- Libritos -->
+    <div class="section" style="--i:2">
+      <h2 class="section-title"><i class="fas fa-book-open"></i> 📚 LIBRITOS EDITABLES EN CANVA</h2>
+      <div class="links-grid">
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/tlovrx" target="_blank">Libritos para Colorear - Parte 1</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/liwvip" target="_blank">Libritos para Colorear - Parte 2</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/xjcqjd" target="_blank">Libritos para Colorear - Parte 3</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/lcoxmo" target="_blank">Libritos para Colorear - Parte 4</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/qlxqrq" target="_blank">Mini libros para Colorear - Parte 4</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/wrekyj" target="_blank">Mini libros para Colorear - Parte 5</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/ainmaj" target="_blank">Plantillas Cajitas de Crayones 🖍️</a></div>
+      </div>
+    </div>
+
+    <!-- Bonos Escolares -->
+    <div class="section" style="--i:3">
+      <h2 class="section-title"><i class="fas fa-graduation-cap"></i> 🏷️ BONOS ESCOLARES</h2>
+      <div class="links-grid">
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/qiacpa" target="_blank">Escolar Editable</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://n9.cl/xryf8" target="_blank">Etiquetas Escolares</a></div>
+      </div>
+      <div class="note">
+        <i class="fas fa-lightbulb"></i>
+        <strong>¿Cómo editar en Canva?</strong> Descarga el archivo → Abre Canva → Clic en "SUBIR" → Elige el archivo PowerPoint → ¡A editar!
+      </div>
+    </div>
+
+    <!-- Flores de Papel -->
+    <div class="section" style="--i:4">
+      <h2 class="section-title"><i class="fas fa-flower"></i> 🌸 FLORES DE PAPEL</h2>
+      <div class="links-grid">
+        <div class="link-card">
+          <i class="fas fa-link"></i>
+          <a href="https://n9.cl/i9gzyp" target="_blank">Plantillas PC (Descarga/Impresión)</a>
+        </div>
+        <div class="link-card">
+          <i class="fas fa-link"></i>
+          <a href="https://surli.cc/ttwpqo" target="_blank">Plantillas Canva ✅ Editables en línea</a>
+          <span class="badge">Recomendado</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recursos 3D -->
+    <div class="section" style="--i:5">
+      <h2 class="section-title"><i class="fas fa-cube"></i> 🎨 RECURSOS EDITABLES Y EXTRAS 3D</h2>
+      <div class="links-grid">
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/qlxfuf" target="_blank">5 Pizarras 🖼️</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surl.li/phqtnz" target="_blank">Cajitas de dulces 🍬</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/ccqbbl" target="_blank">Letras 3D 🔤</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/qmejnh" target="_blank">Números 3D 🔢</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://surli.cc/czjrja" target="_blank">Candy Bars 🍭</a></div>
+      </div>
+    </div>
+
+    <!-- Tutoriales y Cliparts -->
+    <div class="section" style="--i:6">
+      <h2 class="section-title"><i class="fas fa-video"></i> 🎬 TUTORIAL Y CLIPARTS</h2>
+      <div class="links-grid">
+        <div class="link-card"><i class="fas fa-play-circle"></i><a href="https://n9.cl/kg73b" target="_blank">Video Informativo: Plantillas</a></div>
+      </div>
+      <h3 style="margin: 20px 0 15px; color: var(--primary);"><i class="fas fa-images"></i> 🖼️ CLIPARTS +10.000 fondos y recursos</h3>
+      <div class="links-grid">
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://n9.cl/sm2ylw" target="_blank">Cliparts A-C</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://n9.cl/p51ksq" target="_blank">Cliparts D-J</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://n9.cl/dwkyv" target="_blank">Cliparts K-M</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://n9.cl/naxte" target="_blank">Cliparts N-Q</a></div>
+        <div class="link-card"><i class="fas fa-link"></i><a href="https://n9.cl/pm209" target="_blank">Cliparts R-Z</a></div>
+      </div>
+    </div>
+
+    <!-- Cajas Extras -->
+    <div class="section" style="--i:7">
+      <h2 class="section-title"><i class="fas fa-gift"></i> 📦 CAJAS EXTRAS (SVG, PNG, PDF, DXF)</h2>
+      <div class="links-grid">
+        <div class="link-card">
+          <i class="fas fa-download"></i>
+          <a href="https://n9.cl/cl0gc" target="_blank">+120 Cajas Para Dulces</a>
+        </div>
+      </div>
+      <div class="note">
+        <i class="fas fa-info-circle"></i>
+        Estos archivos NO son editables: descárgalos a tu computadora para usarlos en programas de diseño.
+      </div>
+    </div>
+
+    <!-- Soporte -->
+    <div class="section" style="--i:8">
+      <h2 class="section-title"><i class="fas fa-headset"></i> 📖 SOPORTE</h2>
+      <div class="links-grid">
+        <div class="link-card"><i class="fas fa-book"></i><a href="https://surli.cc/xhylsy" target="_blank">Guía de Uso</a></div>
+        <div class="link-card"><i class="fas fa-lightbulb"></i><a href="https://n9.cl/wzdnl" target="_blank">TIPS EXTRA 💡</a></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p><i class="fas fa-heart"></i> Gracias por tu compra. Bendiciones en tu hogar. <i class="fas fa-heart"></i></p>
+      <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">
+        <i class="fas fa-copyright"></i> MEGA KIT MÁGICO - Todos los derechos reservados
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    // Pequeño script para efecto de clic en los links
+    document.querySelectorAll('.link-card a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        this.style.opacity = '0.7';
+        setTimeout(() => {
+          this.style.opacity = '1';
+        }, 200);
+      });
+    });
+  </script>
+</body>
+</html>
